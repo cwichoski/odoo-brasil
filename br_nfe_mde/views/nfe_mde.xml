@@ -108,7 +108,7 @@
     <record model="ir.actions.act_window" id="action_nfe_mde">
         <field name="name">Manifestação</field>
         <field name="res_model">nfe.mde</field>
-        <field name="view_type">form</field>
+        
         <field name="view_mode">tree,form</field>
         <field name="search_view_id" ref="view_nfe_mde_filter" />
         <field name="context">{"search_default_situacao_pendente":1}</field>
