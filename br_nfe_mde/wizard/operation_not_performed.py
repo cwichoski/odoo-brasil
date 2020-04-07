@@ -12,7 +12,7 @@ class OperationNotPerformed(models.TransientModel):
     mde_id = fields.Many2one('nfe.mde', string="Documento")
     justificativa = fields.Text('Justificativa', size=255, required=True)
 
-    @api.multi
+    
     def action_operation_not_performed(self):
         if self.mde_id and len(self.justificativa) > 15:
             self.mde_id.action_not_operation(

@@ -154,7 +154,7 @@
         </record>
 
         <record id="br_account_invoice_eletronic_form" model="ir.ui.view">
-            <field name="name">br.account.invoice.eletronic.form</field>
+            <field name="name">br.account.move.eletronic.form</field>
             <field name="model">invoice.eletronic</field>
             <field name="arch" type="xml">
                 <form string="Documento Eletrônico">

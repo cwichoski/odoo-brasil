@@ -66,7 +66,7 @@ class ProductFiscalClassification(models.Model):
             recs = self.search([('name', operator, name)] + args, limit=limit)
         return recs.name_get()
 
-    @api.multi
+    
     def name_get(self):
         result = []
         for rec in self:

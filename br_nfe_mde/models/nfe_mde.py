@@ -56,7 +56,7 @@ class NfeMde(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _rec_name = 'numero_sequencial'
 
-    @api.multi
+    
     def name_get(self):
         return [(rec.id,
                  u"NFº: {0} ({1}): {2}".format(
@@ -66,7 +66,7 @@ class NfeMde(models.Model):
     def _default_company(self):
         return self.env.user.company_id
 
-    @api.multi
+    
     def _compute_total_edocs(self):
         for item in self:
             item.total_edocs = self.env['invoice.eletronic'].search_count(
@@ -114,7 +114,7 @@ class NfeMde(models.Model):
     total_edocs = fields.Integer(string="Total NFe",
                                  compute=_compute_total_edocs)
 
-    @api.one
+    
     @api.constrains('cnpj_fornecedor', 'partner_id')
     def _check_partner_id(self):
         if self.partner_id and \
@@ -122,7 +122,7 @@ class NfeMde(models.Model):
             raise ValidationError(
                 u"O Parceiro não possui o mesmo CNPJ/CPF do manifesto atual")
 
-    @api.multi
+    
     def action_view_edocs(self):
         if self.total_edocs == 1:
             dummy, act_id = self.env['ir.model.data'].get_object_reference(
@@ -166,7 +166,7 @@ class NfeMde(models.Model):
                 'res_id': event.id
             })
 
-    @api.one
+    
     def action_known_emission(self):
         if self.state != 'pending':
             return True
@@ -198,7 +198,7 @@ class NfeMde(models.Model):
         event = env_events.create(event)
         return True
 
-    @api.one
+    
     def action_confirm_operation(self):
         evento = {
             'tpEvento': 210200,
@@ -222,7 +222,7 @@ class NfeMde(models.Model):
         event = env_events.create(event)
         return True
 
-    @api.one
+    
     def action_unknown_operation(self):
         evento = {
             'tpEvento': 210220,
@@ -246,7 +246,7 @@ class NfeMde(models.Model):
         event = env_events.create(event)
         return True
 
-    @api.multi
+    
     def action_not_operation(self, context=None, justificativa=None):
         evento = {
             'tpEvento': 210240,
@@ -284,7 +284,7 @@ class NfeMde(models.Model):
         event = env_events.create(event)
         return True
 
-    @api.one
+    
     def action_download_xml(self):
         nfe_result = exec_download_nfe(self.company_id, [self.chave_nfe])
         env_events = self.env['invoice.eletronic.event']
@@ -321,7 +321,7 @@ class NfeMde(models.Model):
                 ))
         return False
 
-    @api.multi
+    
     def action_import_xml(self):
         for item in self:
             if not item.nfe_processada:

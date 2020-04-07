@@ -6,14 +6,14 @@ from odoo.addons import decimal_precision as dp
 
 
 class AccountInvoice(models.Model):
-    _inherit = 'account.invoice'
+    _inherit = 'account.move'
 
     fiscal_position_type = fields.Selection(
         related='fiscal_position_id.fiscal_type', readonly=True)
     picking_origin_id = fields.Many2one(
         'stock.picking', string="Picking Origin")
 
-    @api.one
+    
     @api.depends('invoice_line_ids.price_subtotal',
                  'tax_line_ids.amount',
                  'currency_id', 'company_id')
@@ -119,7 +119,7 @@ class AccountInvoice(models.Model):
 
 
 class AccountInvoiceLine(models.Model):
-    _inherit = 'account.invoice.line'
+    _inherit = 'account.move.line'
 
     valor_frete = fields.Float(
         '(+) Frete', digits=dp.get_precision('Account'), default=0.00)
@@ -138,7 +138,7 @@ class AccountInvoiceLine(models.Model):
         })
         return res
 
-    @api.one
+    
     @api.depends('valor_frete', 'valor_seguro', 'outras_despesas')
     def _compute_price(self):
         super(AccountInvoiceLine, self)._compute_price()

@@ -29,7 +29,7 @@ class SaleOrder(models.Model):
                                    for l in order.order_line),
             })
 
-    @api.multi
+    
     def _prepare_invoice(self):
         res = super(SaleOrder, self)._prepare_invoice()
         if self.fiscal_position_id and self.fiscal_position_id.account_id:
@@ -80,7 +80,7 @@ class SaleOrderLine(models.Model):
             'icms_st_aliquota_deducao': self.icms_st_aliquota_deducao,
         }
 
-    @api.multi
+    
     def _prepare_order_line_procurement(self, group_id=False):
         vals = super(SaleOrderLine, self)._prepare_order_line_procurement(
             group_id=group_id)
@@ -224,7 +224,7 @@ class SaleOrderLine(models.Model):
                 'tax_id': [(6, None, [x.id for x in taxes if x])]
             })
 
-    @api.multi
+    
     def _compute_tax_id(self):
         res = super(SaleOrderLine, self)._compute_tax_id()
         for line in self:
@@ -261,7 +261,7 @@ class SaleOrderLine(models.Model):
 
         return res
 
-    @api.multi
+    
     def _prepare_invoice_line(self, qty):
         res = super(SaleOrderLine, self)._prepare_invoice_line(qty)
         res['valor_desconto'] = self.valor_desconto

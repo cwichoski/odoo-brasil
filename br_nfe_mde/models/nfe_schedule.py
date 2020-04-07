@@ -165,7 +165,7 @@ class NfeSchedule(models.TransientModel):
             raise UserError('Total de documentos localizados %s\n%s' % (
                 total, '\n'.join(messages)))
 
-    @api.one
+    
     def execute_download(self):
         self.schedule_download(raise_error=True)
 

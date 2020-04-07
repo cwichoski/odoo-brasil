@@ -65,7 +65,7 @@ class WizardImportNfe(models.TransientModel):
             company_id.invoice_automation, company_id.tax_automation,
             company_id.supplierinfo_automation, False, False)
 
-    @api.multi
+    
     def action_import_nfe(self):
         if not self.nfe_xml and not self.zip_file:
             raise UserError('Por favor, insira um arquivo de NFe.')

@@ -29,7 +29,7 @@ class IuguBoleto(models.Model):
         string="Url de Retorno", default=_default_return_url, size=300
     )
 
-    @api.multi
+    
     def iugu_form_generate_values(self, values):
         """ Função para gerar HTML POST do Iugu """
         base_url = (
@@ -107,7 +107,7 @@ class TransactionIugu(models.Model):
         tx = self.search([("acquirer_reference", "=", acquirer_reference)])
         return tx[0]
 
-    @api.multi
+    
     def _iugu_form_validate(self, data):
         status = data.get("data[status]")
 

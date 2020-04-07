@@ -62,7 +62,7 @@ class CashFlowReport(models.TransientModel):
         "account.cash.flow.line", "cashflow_id",
         string=u"Cash Flow Lines")
 
-    @api.multi
+    
     def draw_chart(self):
         import plotly.graph_objs as go
         from plotly.offline.offline import _plot_html
@@ -145,7 +145,7 @@ class CashFlowReport(models.TransientModel):
 
         return plot_html
 
-    @api.multi
+    
     def calculate_liquidity(self):
         domain = [('user_type_id.type', '=', 'liquidity')]
         if self.account_ids:
@@ -170,7 +170,7 @@ class CashFlowReport(models.TransientModel):
                 })
         return liquidity_lines
 
-    @api.multi
+    
     def calculate_moves(self):
         moveline_obj = self.env['account.move.line']
         domain = [
@@ -212,7 +212,7 @@ class CashFlowReport(models.TransientModel):
             })
         return moves
 
-    @api.multi
+    
     def action_calculate_report(self):
         self.write({'line_ids': [(5, 0, 0)]})
         balance = self.start_amount
@@ -239,7 +239,7 @@ class CashFlowReportLine(models.TransientModel):
     partner_id = fields.Many2one("res.partner", string=u"Partner")
     account_id = fields.Many2one("account.account", string=u"Account")
     journal_id = fields.Many2one("account.journal", string=u"Journal")
-    invoice_id = fields.Many2one("account.invoice", string=u"Invoice")
+    invoice_id = fields.Many2one("account.move", string=u"Invoice")
     debit = fields.Float(string=u"Debit",
                          digits=dp.get_precision('Account'))
     credit = fields.Float(string=u"Credit",

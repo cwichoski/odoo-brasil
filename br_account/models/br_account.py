@@ -46,7 +46,7 @@ class BrAccountCFOP(models.Model):
             recs = self.search([('name', operator, name)] + args, limit=limit)
         return recs.name_get()
 
-    @api.multi
+    
     def name_get(self):
         result = []
         for rec in self:
@@ -83,7 +83,7 @@ class BrAccountServiceType(models.Model):
             recs = self.search([('name', operator, name)] + args, limit=limit)
         return recs.name_get()
 
-    @api.multi
+    
     def name_get(self):
         result = []
         for rec in self:
@@ -164,7 +164,7 @@ class BrAccountCNAE(models.Model):
             recs = self.search([('name', operator, name)] + args, limit=limit)
         return recs.name_get()
 
-    @api.multi
+    
     def name_get(self):
         result = []
         for rec in self:
@@ -177,7 +177,7 @@ class ImportDeclaration(models.Model):
     _description = "Declaração de Importação"
 
     invoice_id = fields.Many2one(
-        'account.invoice', 'Fatura',
+        'account.move', 'Fatura',
         ondelete='cascade', index=True)
 
     name = fields.Char(u'Número da DI', size=10, required=True)
@@ -236,10 +236,10 @@ class AccountDocumentRelated(models.Model):
     _name = 'br_account.document.related'
     _description = "Documentos Relacionados"
 
-    invoice_id = fields.Many2one('account.invoice', 'Documento Fiscal',
+    invoice_id = fields.Many2one('account.move', 'Documento Fiscal',
                                  ondelete='cascade')
     invoice_related_id = fields.Many2one(
-        'account.invoice', 'Documento Fiscal', ondelete='cascade')
+        'account.move', 'Documento Fiscal', ondelete='cascade')
     document_type = fields.Selection(
         [('nf', 'NF'), ('nfe', 'NF-e'), ('cte', 'CT-e'),
             ('nfrural', 'NF Produtor'), ('cf', 'Cupom Fiscal')],
@@ -258,7 +258,7 @@ class AccountDocumentRelated(models.Model):
     fiscal_document_id = fields.Many2one(
         'br_account.fiscal.document', 'Documento')
 
-    @api.one
+    
     @api.constrains('cnpj_cpf')
     def _check_cnpj_cpf(self):
         check_cnpj_cpf = True
@@ -271,7 +271,7 @@ class AccountDocumentRelated(models.Model):
         if not check_cnpj_cpf:
             raise UserError(_('CNPJ/CPF do documento relacionado é invalido!'))
 
-    @api.one
+    
     @api.constrains('inscr_est')
     def _check_ie(self):
         check_ie = True

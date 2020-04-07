@@ -8,5 +8,5 @@ class PaymentOrderLine(models.Model):
     _inherit = 'payment.order.line'
 
     invoice_id = fields.Many2one(
-        'account.invoice', string="Fatura Origem")
+        'account.move', string="Fatura Origem")
     partner_ref = fields.Char(string="Ref. Parceiro")

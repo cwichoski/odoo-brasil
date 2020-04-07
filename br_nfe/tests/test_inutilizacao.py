@@ -203,7 +203,7 @@ class TestInutilizacao(TransactionCase):
             justificativa='Sed lorem nibh, sodales ut ex a, tristique ullamcor'
         ))
         wizard2.action_inutilize_nfe()
-        invoice = self.env['account.invoice'].create(dict(
+        invoice = self.env['account.move'].create(dict(
             self.default_invoice.items(),
             partner_id=self.partner_fisica.id,
         ))
@@ -243,7 +243,7 @@ class TestInutilizacao(TransactionCase):
         self.assertEqual(inut_inv.name, u'Série Inutilizada 0 - 5')
         self.assertEqual(inut_inv.justificativa, justif)
         self.assertEqual(inut_inv.state, 'done')
-        invoice = self.env['account.invoice'].create(dict(
+        invoice = self.env['account.move'].create(dict(
             self.default_invoice.items(),
             partner_id=self.partner_fisica.id,
         ))
@@ -262,7 +262,7 @@ class TestInutilizacao(TransactionCase):
             modelo='55',
             justificativa='Sed lorem nibh, sodales ut ex a, tristique ullamcor'
         ))
-        invoice = self.env['account.invoice'].create(dict(
+        invoice = self.env['account.move'].create(dict(
             self.default_invoice.items(),
             partner_id=self.partner_fisica.id,
         ))
@@ -336,7 +336,7 @@ class TestInutilizacao(TransactionCase):
             modelo='55',
             justificativa='Sed lorem nibh, sodales ut ex a, tristique ullamcor'
         ))
-        invoice = self.env['account.invoice'].create(dict(
+        invoice = self.env['account.move'].create(dict(
             self.default_invoice.items(),
             partner_id=self.partner_fisica.id,
         ))

@@ -7,9 +7,9 @@ from odoo import fields, models, api
 
 
 class AccountInvoice(models.Model):
-    _inherit = 'account.invoice'
+    _inherit = 'account.move'
 
-    @api.multi
+    
     def action_invoice_open(self):
         for invoice in self:
             super(AccountInvoice, self).action_invoice_open()
@@ -37,7 +37,7 @@ class AccountInvoice(models.Model):
 
 
 class AccountInvoiceLine(models.Model):
-    _inherit = ['account.invoice.line']
+    _inherit = ['account.move.line']
 
     imported = fields.Boolean('Importado via NFe', readonly=True)
     product_ean = fields.Char('EAN - NFe')

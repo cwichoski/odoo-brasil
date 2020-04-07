@@ -6,7 +6,7 @@ from odoo import models, fields
 
 
 class AccountInvoice(models.Model):
-    _inherit = 'account.invoice'
+    _inherit = 'account.move'
 
     def _return_pdf_invoice(self, doc):
         if doc.model == '015':  # Maringá,PR
@@ -22,7 +22,7 @@ class AccountInvoice(models.Model):
 
 
 class AccountInvoiceLine(models.Model):
-    _inherit = 'account.invoice.line'
+    _inherit = 'account.move.line'
 
     exigibilidade_iss = fields.Selection(
         string="Exigibilidade ISS",

@@ -5,7 +5,7 @@ from odoo import fields, models
 
 
 class AccountInvoice(models.Model):
-    _inherit = 'account.invoice'
+    _inherit = 'account.move'
 
     def _prepare_invoice_line_from_po_line(self, line):
         res = super(AccountInvoice, self)._prepare_invoice_line_from_po_line(
@@ -111,7 +111,7 @@ class AccountInvoice(models.Model):
 
 
 class AccountInvoiceLine(models.Model):
-    _inherit = 'account.invoice.line'
+    _inherit = 'account.move.line'
 
     fiscal_position_type = fields.Selection(
         [('saida', 'Saída'), ('entrada', 'Entrada'),

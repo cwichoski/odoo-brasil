@@ -8,9 +8,9 @@ from dateutil.relativedelta import relativedelta
 
 
 class AccountInvoice(models.Model):
-    _inherit = 'account.invoice'
+    _inherit = 'account.move'
 
-    @api.multi
+    
     def group_invoices(self, group_dict):
         """
         group_dict = [{"rule_name": 'serv_01.05', "fpos": 1,
@@ -21,7 +21,7 @@ class AccountInvoice(models.Model):
         for inv in vals:
             self._create_invoices_grouped(inv)
 
-    @api.multi
+    
     def _prepare_invoice_dict(self, group_dict):
         """
         Primeiro pega todas as notas possíveis de agrupar e depois
@@ -131,7 +131,7 @@ class AccountInvoice(models.Model):
                 'invoice_line_tax_ids': [
                     (6, 0, [tax.id for tax in line.invoice_line_tax_ids])]
                 }
-            new_line = self.env['account.invoice.line'].create(vals)
+            new_line = self.env['account.move.line'].create(vals)
             new_line._br_account_onchange_product_id()
             new_line._set_taxes_from_fiscal_pos()
         gr_invoice_id._onchange_invoice_line_ids()
@@ -139,7 +139,7 @@ class AccountInvoice(models.Model):
         cancel_msg = ("""
             <p>This invoice was canceled by group rule named %s and
                 created the invoice:
-                <a href='#' data-oe-model='account.invoice'
+                <a href='#' data-oe-model='account.move'
                             data-oe-id='%s'> %s
                 </a>
             </p>""" % (inv['rule'], gr_invoice_id.id, partner_id.name))
@@ -147,7 +147,7 @@ class AccountInvoice(models.Model):
         [i.message_post(cancel_msg) for i in inv_ids]
         msg_ids = ''
         for id in inv_ids.ids:
-            msg_ids += """<a href='#' data-oe-model='account.invoice'
+            msg_ids += """<a href='#' data-oe-model='account.move'
                                      data-oe-id='%s'> inv_%s -
                           </a>""" % (id, id)
 

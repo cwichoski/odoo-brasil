@@ -164,7 +164,7 @@ class InutilizedNfe(models.Model):
                                   ambiente=int(ambiente), modelo=obj['modelo'])
         return self._handle_response(response=resposta)
 
-    @api.multi
+    
     def action_send_inutilization(self):
         self.validate_hook()
         retorno = self.send_sefaz()

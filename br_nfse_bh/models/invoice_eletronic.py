@@ -61,7 +61,7 @@ class InvoiceEletronic(models.Model):
     total_com_retencoes = fields.Monetary(
         compute="_compute_total_com_retencoes")
 
-    @api.multi
+    
     def _hook_validation(self):
         errors = super(InvoiceEletronic, self)._hook_validation()
         if self.model == '014':
@@ -79,7 +79,7 @@ class InvoiceEletronic(models.Model):
 
         return errors
 
-    @api.multi
+    
     def _prepare_eletronic_invoice_values(self):
         res = super(InvoiceEletronic, self)._prepare_eletronic_invoice_values()
         if self.model != '014':
@@ -187,7 +187,7 @@ class InvoiceEletronic(models.Model):
                 datas_fname=attachment.datas_fname,
                 datas=attachment.datas,
                 mimetype=attachment.mimetype,
-                res_model='account.invoice',
+                res_model='account.move',
                 res_id=self.invoice_id.id,
             ))
             atts.append(xml_id.id)
@@ -206,14 +206,14 @@ class InvoiceEletronic(models.Model):
                 datas_fname=filename,
                 datas=base64.b64encode(danfse),
                 mimetype='application/pdf',
-                res_model='account.invoice',
+                res_model='account.move',
                 res_id=self.invoice_id.id,
             ))
             atts.append(danfe_id.id)
 
         return atts
 
-    @api.multi
+    
     def action_post_validate(self):
         super(InvoiceEletronic, self).action_post_validate()
         if self.model not in ('014'):
@@ -232,7 +232,7 @@ class InvoiceEletronic(models.Model):
         self.xml_to_send = base64.encodestring(xml_enviar)
         self.xml_to_send_name = 'nfse-enviar-%s.xml' % self.numero
 
-    @api.multi
+    
     def action_send_eletronic_invoice(self):
         super(InvoiceEletronic, self).action_send_eletronic_invoice()
         if self.model != '014' or self.state in ('done', 'cancel'):
@@ -278,7 +278,7 @@ class InvoiceEletronic(models.Model):
         self._create_attachment(
             'nfse-ret', self, enviar_nfse['received_xml'])
 
-    @api.multi
+    
     def action_cancel_document(self, context=None, justificativa=None):
         if self.model not in ('014'):
             return super(InvoiceEletronic, self).action_cancel_document(

@@ -5,7 +5,7 @@ from odoo import models
 
 
 class AccountInvoiceLine(models.Model):
-    _inherit = 'account.invoice.line'
+    _inherit = 'account.move.line'
 
     def _prepare_tax_context(self):
         res = super(AccountInvoiceLine, self)._prepare_tax_context()

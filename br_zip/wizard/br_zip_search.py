@@ -42,7 +42,7 @@ class BrZipSearch(models.TransientModel):
         data['state'] = 'done'
         return data
 
-    @api.multi
+    
     def zip_search(self):
         self.ensure_one()
         data = self
@@ -76,7 +76,7 @@ class BrZipSearch(models.TransientModel):
             'nodestroy': True,
         }
 
-    @api.multi
+    
     def zip_new_search(self):
         self.write({'state': 'init',
                     'zip_ids': [[6, 0, []]]})
@@ -130,7 +130,7 @@ class BrZipResult(models.TransientModel):
             result.append(zip_result_id)
         return result
 
-    @api.multi
+    
     def zip_select(self):
         self.ensure_one()
         data = self

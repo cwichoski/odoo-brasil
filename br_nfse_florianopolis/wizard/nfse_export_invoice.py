@@ -102,12 +102,12 @@ class NfseExportInvoice(models.TransientModel):
         zip_base64.seek(0)
         return base64.b64encode(zip_base64.getvalue())
 
-    @api.multi
+    
     def nfse_export(self):
         self.state = 'done'
         active_ids = self.env.context.get('active_ids', [])
 
-        invoice_ids = self.env['account.invoice'].browse(active_ids)
+        invoice_ids = self.env['account.move'].browse(active_ids)
         xmls = []
         for invoice in invoice_ids:
             errors = []

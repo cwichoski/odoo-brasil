@@ -5,7 +5,7 @@ from odoo import models
 
 
 class AccountInvoice(models.Model):
-    _inherit = 'account.invoice'
+    _inherit = 'account.move'
 
     def _prepare_edoc_vals(self, inv, inv_lines, serie_id):
         res = super(AccountInvoice, self)._prepare_edoc_vals(

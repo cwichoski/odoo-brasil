@@ -28,7 +28,7 @@ class AccountPayment(models.Model):
                  (column, '=', 0),
                  ('reconciled', '=', False)])
 
-    @api.multi
+    
     def action_view_receivable_payable(self):
         if self.partner_type == 'supplier':
             action_ref = 'br_account_payment.action_payable_move_lines'

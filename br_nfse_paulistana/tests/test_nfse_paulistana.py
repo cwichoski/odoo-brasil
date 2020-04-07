@@ -150,11 +150,11 @@ class TestNFeBrasil(TransactionCase):
             'invoice_line_ids': invoice_line_data
         }
 
-        self.invoices = self.env['account.invoice'].create(dict(
+        self.invoices = self.env['account.move'].create(dict(
             default_invoice.items(),
             partner_id=self.partner_fisica.id
         ))
-        self.invoices |= self.env['account.invoice'].create(dict(
+        self.invoices |= self.env['account.move'].create(dict(
             default_invoice.items(),
             partner_id=self.partner_juridica.id
         ))

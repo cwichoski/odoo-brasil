@@ -6,7 +6,7 @@ from odoo import fields, models
 
 
 class AccountInvoice(models.Model):
-    _inherit = 'account.invoice'
+    _inherit = 'account.move'
 
     l10n_br_serie_supplier = fields.Char(string="Supplier Series", size=6)
     l10n_br_sped_emit = fields.Selection(

@@ -21,7 +21,7 @@ class InvoiceEletronic(models.Model):
         })
         return variables
 
-    @api.multi
+    
     def _prepare_eletronic_invoice_values(self):
         vals = super(InvoiceEletronic, self)\
             ._prepare_eletronic_invoice_values()

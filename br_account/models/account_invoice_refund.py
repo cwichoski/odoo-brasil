@@ -5,12 +5,12 @@ from odoo import models, fields, api
 
 
 class AccountInvoiceRefund(models.TransientModel):
-    _inherit = 'account.invoice.refund'
+    _inherit = 'account.move.refund'
 
     fiscal_position_id = fields.Many2one(
         'account.fiscal.position', string="Posição Fiscal")
 
-    @api.multi
+    
     def invoice_refund(self):
         res = super(AccountInvoiceRefund, self).invoice_refund()
         if type(res) is bool:
@@ -19,7 +19,7 @@ class AccountInvoiceRefund(models.TransientModel):
             return res
 
         invoice_id = res['domain'][1][2][0]
-        invoice_id = self.env['account.invoice'].search([
+        invoice_id = self.env['account.move'].search([
             ('id', '=', invoice_id)
         ])
         fiscal_pos = self.fiscal_position_id

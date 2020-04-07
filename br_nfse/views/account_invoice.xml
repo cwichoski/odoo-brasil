@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <record id="view_br_nfse_account_invoice_form" model="ir.ui.view">
-        <field name="name">view_br_nfse.account.invoice.form</field>
-        <field name="model">account.invoice</field>
+        <field name="name">view_br_nfse.account.move.form</field>
+        <field name="model">account.move</field>
         <field name="inherit_id" ref="br_account.view_br_account_invoice_form"/>
         <field name="arch" type="xml">
             <div class="alert alert-info" position="after">
@@ -18,8 +18,8 @@
         </field>
     </record>
     <record id="view_br_nfse_account_invoice_supplier_form" model="ir.ui.view">
-        <field name="name">view_br_nfse.account.invoice.form</field>
-        <field name="model">account.invoice</field>
+        <field name="name">view_br_nfse.account.move.form</field>
+        <field name="model">account.move</field>
         <field name="inherit_id" ref="br_account.view_br_account_invoice_supplier_form"/>
         <field name="arch" type="xml">
             <div class="alert alert-info" position="after">
@@ -35,9 +35,9 @@
         </field>
     </record>
     <record id="view_br_nfse_account_invoice_tree" model="ir.ui.view">
-        <field name="name">view_br_nfse.account.invoice.tree</field>
-        <field name="model">account.invoice</field>
-        <field name="inherit_id" ref="account.invoice_tree"/>
+        <field name="name">view_br_nfse.account.move.tree</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.move_tree"/>
         <field name="arch" type="xml">
             <field name="number" position="after">
                 <field name="numero_nfse" />

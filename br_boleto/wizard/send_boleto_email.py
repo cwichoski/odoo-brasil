@@ -8,10 +8,10 @@ class BoletoSendEmail(models.TransientModel):
     _name = 'boleto.send.email'
     _description = "Envio de email de boleto"
 
-    @api.multi
+    
     def send_boletos_by_email(self):
         context = dict(self._context or {})
         active_ids = context.get('active_ids', []) or []
-        invoices = self.env['account.invoice'].browse(active_ids)
+        invoices = self.env['account.move'].browse(active_ids)
         invoices.send_email_boleto_queue()
         return {'type': 'ir.actions.act_window_close'}

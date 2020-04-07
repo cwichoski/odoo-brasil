@@ -1,7 +1,7 @@
 <odoo>
     <report
         id="payment_receipt_invoice"
-        model="account.invoice"
+        model="account.move"
         report_type="qweb-pdf"
         string="Recibo de Pagamento"
         name="br_payment_invoice.report_cnab_payment_invoice"

@@ -80,37 +80,37 @@ msgid "(=) Valor Líquido"
 msgstr "(=) Valor Líquido"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_tipo_base:0
+#: selection:account.move.line,icms_tipo_base:0
 msgid "0 - Margem Valor Agregado (%)"
 msgstr "0 - Margem Valor Agregado (%)"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_origem:0
+#: selection:account.move.line,icms_origem:0
 #: selection:product.template,origin:0
 msgid "0 - Nacional"
 msgstr "0 - Nacional"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_st_tipo_base:0
+#: selection:account.move.line,icms_st_tipo_base:0
 msgid "0 - Preço tabelado ou máximo  sugerido"
 msgstr "0 - Preço tabelado ou máximo  sugerido"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_ipi:0
-#: selection:account.invoice.line,ipi_cst:0
+#: selection:account.move.line,ipi_cst:0
 #: selection:product.fiscal.classification,ipi_cst:0
 msgid "00 - Entrada com Recuperação de Crédito"
 msgstr "00 - Entrada com Recuperação de Crédito"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_icms:0
-#: selection:account.invoice.line,icms_cst_normal:0
+#: selection:account.move.line,icms_cst_normal:0
 msgid "00 - Tributada Integralmente"
 msgstr "00 - Tributada Integralmente"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_ipi:0
-#: selection:account.invoice.line,ipi_cst:0
+#: selection:account.move.line,ipi_cst:0
 #: selection:product.fiscal.classification,ipi_cst:0
 msgid "01 - Entrada Tributável com Alíquota Zero"
 msgstr "01 - Entrada Tributável com Alíquota Zero"
@@ -118,14 +118,14 @@ msgstr "01 - Entrada Tributável com Alíquota Zero"
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "01 - Operação Tributável com Alíquota Básica"
 msgstr "01 - Operação Tributável com Alíquota Básica"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_ipi:0
-#: selection:account.invoice.line,ipi_cst:0
+#: selection:account.move.line,ipi_cst:0
 #: selection:product.fiscal.classification,ipi_cst:0
 msgid "02 - Entrada Isenta"
 msgstr "02 - Entrada Isenta"
@@ -133,14 +133,14 @@ msgstr "02 - Entrada Isenta"
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "02 - Operação Tributável com Alíquota Diferenciada"
 msgstr "02 - Operação Tributável com Alíquota Diferenciada"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_ipi:0
-#: selection:account.invoice.line,ipi_cst:0
+#: selection:account.move.line,ipi_cst:0
 #: selection:product.fiscal.classification,ipi_cst:0
 msgid "03 - Entrada Não-Tributada"
 msgstr "03 - Entrada Não-Tributada"
@@ -148,14 +148,14 @@ msgstr "03 - Entrada Não-Tributada"
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "03 - Operação Tributável com Alíquota por Unidade de Medida de Produto"
 msgstr "03 - Operação Tributável com Alíquota por Unidade de Medida de Produto"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_ipi:0
-#: selection:account.invoice.line,ipi_cst:0
+#: selection:account.move.line,ipi_cst:0
 #: selection:product.fiscal.classification,ipi_cst:0
 msgid "04 - Entrada Imune"
 msgstr "04 - Entrada Imune"
@@ -163,14 +163,14 @@ msgstr "04 - Entrada Imune"
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "04 - Operação Tributável Monofásica - Revenda a Alíquota Zero"
 msgstr "04 - Operação Tributável Monofásica - Revenda a Alíquota Zero"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_ipi:0
-#: selection:account.invoice.line,ipi_cst:0
+#: selection:account.move.line,ipi_cst:0
 #: selection:product.fiscal.classification,ipi_cst:0
 msgid "05 - Entrada com Suspensão"
 msgstr "05 - Entrada com Suspensão"
@@ -178,45 +178,45 @@ msgstr "05 - Entrada com Suspensão"
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "05 - Operação Tributável por Substituição Tributária"
 msgstr "05 - Operação Tributável por Substituição Tributária"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "06 - Operação Tributável a Alíquota Zero"
 msgstr "06 - Operação Tributável a Alíquota Zero"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "07 - Operação Isenta da Contribuição"
 msgstr "07 - Operação Isenta da Contribuição"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "08 - Operação sem Incidência da Contribuição"
 msgstr "08 - Operação sem Incidência da Contribuição"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "09 - Operação com Suspensão da Contribuiçã"
 msgstr "09 - Operação com Suspensão da Contribuiçã"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_origem:0
+#: selection:account.move.line,icms_origem:0
 #: selection:product.template,origin:0
 msgid "1 - Estrangeira - Importação direta"
 msgstr "1 - Estrangeira - Importação direta"
@@ -227,7 +227,7 @@ msgid "1 - Importação por conta própria"
 msgstr "1 - Importação por conta própria"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_st_tipo_base:0
+#: selection:account.move.line,icms_st_tipo_base:0
 msgid "1 - Lista Negativa (valor)"
 msgstr "1 - Lista Negativa (valor)"
 
@@ -237,7 +237,7 @@ msgid "1 - Marítima"
 msgstr "1 - Marítima"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_tipo_base:0
+#: selection:account.move.line,icms_tipo_base:0
 msgid "1 - Pauta (valor)"
 msgstr "1 - Pauta (valor)"
 
@@ -248,30 +248,30 @@ msgstr "10 - Entrada / Saída ficta"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_icms:0
-#: selection:account.invoice.line,icms_cst_normal:0
+#: selection:account.move.line,icms_cst_normal:0
 msgid "10 - Tributada e com cobrança do ICMS por substituição tributária"
 msgstr "10 - Tributada e com cobrança do ICMS por substituição tributária"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,csosn_icms:0
-#: selection:account.invoice.line,icms_csosn_simples:0
+#: selection:account.move.line,icms_csosn_simples:0
 msgid "101 - Tributada pelo Simples Nacional com permissão de crédito"
 msgstr "101 - Tributada pelo Simples Nacional com permissão de crédito"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,csosn_icms:0
-#: selection:account.invoice.line,icms_csosn_simples:0
+#: selection:account.move.line,icms_csosn_simples:0
 msgid "102 - Tributada pelo Simples Nacional sem permissão de crédito"
 msgstr "102 - Tributada pelo Simples Nacional sem permissão de crédito"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,csosn_icms:0
-#: selection:account.invoice.line,icms_csosn_simples:0
+#: selection:account.move.line,icms_csosn_simples:0
 msgid "103 -Isenção do ICMS no Simples Nacional para faixa de receita bruta"
 msgstr "103 -Isenção do ICMS no Simples Nacional para faixa de receita bruta"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_origem:0
+#: selection:account.move.line,icms_origem:0
 #: selection:product.template,origin:0
 msgid "2 - Estrangeira - Adquirida no mercado interno"
 msgstr "2 - Estrangeira - Adquirida no mercado interno"
@@ -287,36 +287,36 @@ msgid "2 - Importação por conta e ordem"
 msgstr "2 - Importação por conta e ordem"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_st_tipo_base:0
+#: selection:account.move.line,icms_st_tipo_base:0
 msgid "2 - Lista Positiva (valor)"
 msgstr "2 - Lista Positiva (valor)"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_tipo_base:0
+#: selection:account.move.line,icms_tipo_base:0
 msgid "2 - Preço Tabelado Máximo (valor)"
 msgstr "2 - Preço Tabelado Máximo (valor)"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_icms:0
-#: selection:account.invoice.line,icms_cst_normal:0
+#: selection:account.move.line,icms_cst_normal:0
 msgid "20 - Com redução de base de cálculo"
 msgstr "20 - Com redução de base de cálculo"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,csosn_icms:0
-#: selection:account.invoice.line,icms_csosn_simples:0
+#: selection:account.move.line,icms_csosn_simples:0
 msgid "201 - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária"
 msgstr "201 - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,csosn_icms:0
-#: selection:account.invoice.line,icms_csosn_simples:0
+#: selection:account.move.line,icms_csosn_simples:0
 msgid "202 - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária"
 msgstr "202 - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,csosn_icms:0
-#: selection:account.invoice.line,icms_csosn_simples:0
+#: selection:account.move.line,icms_csosn_simples:0
 msgid "203 - Isenção do ICMS no Simples Nacional para faixa de receita bruta e com cobrança do ICMS por substituição tributária"
 msgstr "203 - Isenção do ICMS no Simples Nacional para faixa de receita bruta e com cobrança do ICMS por substituição tributária"
 
@@ -331,30 +331,30 @@ msgid "3 - Lacustre"
 msgstr "3 - Lacustre"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_st_tipo_base:0
+#: selection:account.move.line,icms_st_tipo_base:0
 msgid "3 - Lista Neutra (valor)"
 msgstr "3 - Lista Neutra (valor)"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_origem:0
+#: selection:account.move.line,icms_origem:0
 #: selection:product.template,origin:0
 msgid "3 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% e inferior ou igual a 70%"
 msgstr "3 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% e inferior ou igual a 70%"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_tipo_base:0
+#: selection:account.move.line,icms_tipo_base:0
 msgid "3 - Valor da Operação"
 msgstr "3 - Valor da Operação"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_icms:0
-#: selection:account.invoice.line,icms_cst_normal:0
+#: selection:account.move.line,icms_cst_normal:0
 msgid "30 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária"
 msgstr "30 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,csosn_icms:0
-#: selection:account.invoice.line,icms_csosn_simples:0
+#: selection:account.move.line,icms_csosn_simples:0
 msgid "300 - Imune"
 msgstr "300 - Imune"
 
@@ -364,37 +364,37 @@ msgid "4 - Aérea"
 msgstr "4 - Aérea"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_st_tipo_base:0
+#: selection:account.move.line,icms_st_tipo_base:0
 msgid "4 - Margem Valor Agregado (%)"
 msgstr "4 - Margem Valor Agregado (%)"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_origem:0
+#: selection:account.move.line,icms_origem:0
 #: selection:product.template,origin:0
 msgid "4 - Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam as legislações citadas nos Ajustes"
 msgstr "4 - Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam as legislações citadas nos Ajustes"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_icms:0
-#: selection:account.invoice.line,icms_cst_normal:0
+#: selection:account.move.line,icms_cst_normal:0
 msgid "40 - Isenta"
 msgstr "40 - Isenta"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,csosn_icms:0
-#: selection:account.invoice.line,icms_csosn_simples:0
+#: selection:account.move.line,icms_csosn_simples:0
 msgid "400 - Não tributada pelo Simples Nacional"
 msgstr "400 - Não tributada pelo Simples Nacional"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_icms:0
-#: selection:account.invoice.line,icms_cst_normal:0
+#: selection:account.move.line,icms_cst_normal:0
 msgid "41 - Não tributada"
 msgstr "41 - Não tributada"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_ipi:0
-#: selection:account.invoice.line,ipi_cst:0
+#: selection:account.move.line,ipi_cst:0
 #: selection:product.fiscal.classification,ipi_cst:0
 msgid "49 - Outras Entradas"
 msgstr "49 - Outras Entradas"
@@ -402,19 +402,19 @@ msgstr "49 - Outras Entradas"
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "49 - Outras Operações de Saída"
 msgstr "49 - Outras Operações de Saída"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_origem:0
+#: selection:account.move.line,icms_origem:0
 #: selection:product.template,origin:0
 msgid "5 - Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40%"
 msgstr "5 - Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40%"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_st_tipo_base:0
+#: selection:account.move.line,icms_st_tipo_base:0
 msgid "5 - Pauta (valor)"
 msgstr "5 - Pauta (valor)"
 
@@ -426,47 +426,47 @@ msgstr "5 - Postal"
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "50 - Operação com Direito a Crédito - Vinculada Exclusivamente a Receita Tributada no Mercado Interno"
 msgstr "50 - Operação com Direito a Crédito - Vinculada Exclusivamente a Receita Tributada no Mercado Interno"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_ipi:0
-#: selection:account.invoice.line,ipi_cst:0
+#: selection:account.move.line,ipi_cst:0
 #: selection:product.fiscal.classification,ipi_cst:0
 msgid "50 - Saída Tributada"
 msgstr "50 - Saída Tributada"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_icms:0
-#: selection:account.invoice.line,icms_cst_normal:0
+#: selection:account.move.line,icms_cst_normal:0
 msgid "50 - Suspensão"
 msgstr "50 - Suspensão"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,csosn_icms:0
-#: selection:account.invoice.line,icms_csosn_simples:0
+#: selection:account.move.line,icms_csosn_simples:0
 msgid "500 - ICMS cobrado anteriormente por substituição tributária (substituído) ou por antecipação"
 msgstr "500 - ICMS cobrado anteriormente por substituição tributária (substituído) ou por antecipação"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_icms:0
-#: selection:account.invoice.line,icms_cst_normal:0
+#: selection:account.move.line,icms_cst_normal:0
 msgid "51 - Diferimento"
 msgstr "51 - Diferimento"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "51 - Operação com Direito a Crédito - Vinculada Exclusivamente a Receita Não-Tributada no Mercado Interno"
 msgstr "51 - Operação com Direito a Crédito - Vinculada Exclusivamente a Receita Não-Tributada no Mercado Interno"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_ipi:0
-#: selection:account.invoice.line,ipi_cst:0
+#: selection:account.move.line,ipi_cst:0
 #: selection:product.fiscal.classification,ipi_cst:0
 msgid "51 - Saída Tributável com Alíquota Zero"
 msgstr "51 - Saída Tributável com Alíquota Zero"
@@ -474,14 +474,14 @@ msgstr "51 - Saída Tributável com Alíquota Zero"
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "52 - Operação com Direito a Crédito - Vinculada Exclusivamente a Receita de Exportação"
 msgstr "52 - Operação com Direito a Crédito - Vinculada Exclusivamente a Receita de Exportação"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_ipi:0
-#: selection:account.invoice.line,ipi_cst:0
+#: selection:account.move.line,ipi_cst:0
 #: selection:product.fiscal.classification,ipi_cst:0
 msgid "52 - Saída Isenta"
 msgstr "52 - Saída Isenta"
@@ -489,14 +489,14 @@ msgstr "52 - Saída Isenta"
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "53 - Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno"
 msgstr "53 - Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_ipi:0
-#: selection:account.invoice.line,ipi_cst:0
+#: selection:account.move.line,ipi_cst:0
 #: selection:product.fiscal.classification,ipi_cst:0
 msgid "53 - Saída Não-Tributada"
 msgstr "53 - Saída Não-Tributada"
@@ -504,14 +504,14 @@ msgstr "53 - Saída Não-Tributada"
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "54 - Operação com Direito a Crédito - Vinculada a Receitas Tributadas no Mercado Interno e de Exportação"
 msgstr "54 - Operação com Direito a Crédito - Vinculada a Receitas Tributadas no Mercado Interno e de Exportação"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_ipi:0
-#: selection:account.invoice.line,ipi_cst:0
+#: selection:account.move.line,ipi_cst:0
 #: selection:product.fiscal.classification,ipi_cst:0
 msgid "54 - Saída Imune"
 msgstr "54 - Saída Imune"
@@ -519,14 +519,14 @@ msgstr "54 - Saída Imune"
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "55 - Operação com Direito a Crédito - Vinculada a Receitas Não Tributadas no Mercado Interno e de Exportação"
 msgstr "55 - Operação com Direito a Crédito - Vinculada a Receitas Não Tributadas no Mercado Interno e de Exportação"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_ipi:0
-#: selection:account.invoice.line,ipi_cst:0
+#: selection:account.move.line,ipi_cst:0
 #: selection:product.fiscal.classification,ipi_cst:0
 msgid "55 - Saída com Suspensão"
 msgstr "55 - Saída com Suspensão"
@@ -534,13 +534,13 @@ msgstr "55 - Saída com Suspensão"
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "56 - Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno e de Exportação"
 msgstr "56 - Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno e de Exportação"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_origem:0
+#: selection:account.move.line,icms_origem:0
 #: selection:product.template,origin:0
 msgid "6 - Estrangeira - Importação direta, sem similar nacional, constante em lista da CAMEX e gás natural"
 msgstr "6 - Estrangeira - Importação direta, sem similar nacional, constante em lista da CAMEX e gás natural"
@@ -553,75 +553,75 @@ msgstr "6 - Ferroviária"
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "60 - Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Tributada no Mercado Interno"
 msgstr "60 - Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Tributada no Mercado Interno"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_icms:0
-#: selection:account.invoice.line,icms_cst_normal:0
+#: selection:account.move.line,icms_cst_normal:0
 msgid "60 - ICMS cobrado anteriormente por substituição tributária"
 msgstr "60 - ICMS cobrado anteriormente por substituição tributária"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "61 - Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Não-Tributada no Mercado Interno"
 msgstr "61 - Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Não-Tributada no Mercado Interno"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "62 - Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita de Exportação"
 msgstr "62 - Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita de Exportação"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "63 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno"
 msgstr "63 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "64 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas no Mercado Interno e de Exportação"
 msgstr "64 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas no Mercado Interno e de Exportação"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "65 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Não-Tributadas no Mercado Interno e de Exportação"
 msgstr "65 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Não-Tributadas no Mercado Interno e de Exportação"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "66 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno e de Exportação"
 msgstr "66 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno e de Exportação"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "67 - Crédito Presumido - Outras Operações"
 msgstr "67 - Crédito Presumido - Outras Operações"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_origem:0
+#: selection:account.move.line,icms_origem:0
 #: selection:product.template,origin:0
 msgid "7 - Estrangeira - Adquirida no mercado interno, sem similar nacional, constante lista CAMEX e gás natural"
 msgstr "7 - Estrangeira - Adquirida no mercado interno, sem similar nacional, constante lista CAMEX e gás natural"
@@ -633,55 +633,55 @@ msgstr "7 - Rodoviária"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_icms:0
-#: selection:account.invoice.line,icms_cst_normal:0
+#: selection:account.move.line,icms_cst_normal:0
 msgid "70 - Com redução de base de cálculo e cobrança do ICMS por substituição tributária"
 msgstr "70 - Com redução de base de cálculo e cobrança do ICMS por substituição tributária"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "70 - Operação de Aquisição sem Direito a Crédito"
 msgstr "70 - Operação de Aquisição sem Direito a Crédito"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "71 - Operação de Aquisição com Isenção"
 msgstr "71 - Operação de Aquisição com Isenção"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "72 - Operação de Aquisição com Suspensão"
 msgstr "72 - Operação de Aquisição com Suspensão"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "73 - Operação de Aquisição a Alíquota Zero"
 msgstr "73 - Operação de Aquisição a Alíquota Zero"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "74 - Operação de Aquisição sem Incidência da Contribuição"
 msgstr "74 - Operação de Aquisição sem Incidência da Contribuição"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "75 - Operação de Aquisição por Substituição Tributária"
 msgstr "75 - Operação de Aquisição por Substituição Tributária"
 
@@ -691,7 +691,7 @@ msgid "8 - Conduto / Rede Transmissão"
 msgstr "8 - Conduto / Rede Transmissão"
 
 #. module: br_account
-#: selection:account.invoice.line,icms_origem:0
+#: selection:account.move.line,icms_origem:0
 #: selection:product.template,origin:0
 msgid "8 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70%"
 msgstr "8 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70%"
@@ -703,35 +703,35 @@ msgstr "9 - Meios Próprios"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_icms:0
-#: selection:account.invoice.line,icms_cst_normal:0
+#: selection:account.move.line,icms_cst_normal:0
 msgid "90 - Outras"
 msgstr "90 - Outras"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,csosn_icms:0
-#: selection:account.invoice.line,icms_csosn_simples:0
+#: selection:account.move.line,icms_csosn_simples:0
 msgid "900 - Outros"
 msgstr "900 - Outros"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "98 - Outras Operações de Entrada"
 msgstr "98 - Outras Operações de Entrada"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_cofins:0
 #: selection:account.fiscal.position.tax.rule,cst_pis:0
-#: selection:account.invoice.line,cofins_cst:0
-#: selection:account.invoice.line,pis_cst:0
+#: selection:account.move.line,cofins_cst:0
+#: selection:account.move.line,pis_cst:0
 msgid "99 - Outras Operações"
 msgstr "99 - Outras Operações"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,cst_ipi:0
-#: selection:account.invoice.line,ipi_cst:0
+#: selection:account.move.line,ipi_cst:0
 #: selection:product.fiscal.classification,ipi_cst:0
 msgid "99 - Outras Saídas"
 msgstr "99 - Outras Saídas"
@@ -1857,7 +1857,7 @@ msgid "Is a product variant"
 msgstr "Is a product variant"
 
 #. module: br_account
-#: selection:account.invoice.line,issqn_tipo:0
+#: selection:account.move.line,issqn_tipo:0
 msgid "Isenta"
 msgstr "Isenta"
 
@@ -2014,7 +2014,7 @@ msgid "Nome Reduzido"
 msgstr "Nome Reduzido"
 
 #. module: br_account
-#: selection:account.invoice.line,issqn_tipo:0
+#: selection:account.move.line,issqn_tipo:0
 #: selection:br_account.cfop,internal_type:0
 #: selection:br_account.cnae,internal_type:0
 #: selection:br_account.service.type,internal_type:0
@@ -2176,9 +2176,9 @@ msgid "Perc PIS"
 msgstr "Perc PIS"
 
 #. module: br_account
-#: selection:account.invoice.line,cofins_tipo:0
-#: selection:account.invoice.line,ipi_tipo:0
-#: selection:account.invoice.line,pis_tipo:0
+#: selection:account.move.line,cofins_tipo:0
+#: selection:account.move.line,ipi_tipo:0
+#: selection:account.move.line,pis_tipo:0
 #: selection:product.fiscal.classification,ipi_tipo:0
 msgid "Percentual"
 msgstr "Percentual"
@@ -2201,7 +2201,7 @@ msgstr "Modelo de Produto"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,tipo_produto:0
-#: selection:account.invoice.line,product_type:0
+#: selection:account.move.line,product_type:0
 #: selection:br_account.document.serie,fiscal_type:0
 #: selection:product.template,fiscal_type:0
 msgid "Produto"
@@ -2234,7 +2234,7 @@ msgid "Redução de base ST"
 msgstr "Redução de base ST"
 
 #. module: br_account
-#: selection:account.invoice.line,company_fiscal_type:0
+#: selection:account.move.line,company_fiscal_type:0
 #: selection:res.company,fiscal_type:0
 msgid "Regime Normal"
 msgstr "Regime Normal"
@@ -2362,7 +2362,7 @@ msgid "Retenções"
 msgstr "Retenções"
 
 #. module: br_account
-#: selection:account.invoice.line,issqn_tipo:0
+#: selection:account.move.line,issqn_tipo:0
 msgid "Retida"
 msgstr "Retida"
 
@@ -2403,21 +2403,21 @@ msgstr "Serie de Documentos Fiscais"
 
 #. module: br_account
 #: selection:account.fiscal.position.tax.rule,tipo_produto:0
-#: selection:account.invoice.line,product_type:0
+#: selection:account.move.line,product_type:0
 #: selection:br_account.document.serie,fiscal_type:0
 #: selection:product.template,fiscal_type:0
 msgid "Serviço"
 msgstr "Serviço"
 
 #. module: br_account
-#: selection:account.invoice.line,company_fiscal_type:0
+#: selection:account.move.line,company_fiscal_type:0
 #: model:ir.ui.view,arch_db:br_account.view_br_account_company_form
 #: selection:res.company,fiscal_type:0
 msgid "Simples Nacional"
 msgstr "Simples Nacional"
 
 #. module: br_account
-#: selection:account.invoice.line,company_fiscal_type:0
+#: selection:account.move.line,company_fiscal_type:0
 #: selection:res.company,fiscal_type:0
 msgid "Simples Nacional – excesso de sublimite de receita bruta"
 msgstr "Simples Nacional – excesso de sublimite de receita bruta"
@@ -2428,7 +2428,7 @@ msgid "Substituição Tributária ICMS"
 msgstr "Substituição Tributária ICMS"
 
 #. module: br_account
-#: selection:account.invoice.line,issqn_tipo:0
+#: selection:account.move.line,issqn_tipo:0
 msgid "Substituta"
 msgstr "Substituta"
 

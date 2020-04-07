@@ -263,7 +263,7 @@ class TestNFeBrasil(TransactionCase):
             'freight_responsibility': '0',
             'shipping_supplier_id': self.partner_juridica.id,
         }
-        self.inv_incomplete = self.env['account.invoice'].create(dict(
+        self.inv_incomplete = self.env['account.move'].create(dict(
             name="Teste Validação",
             product_document_id=self.env.ref(
                 'br_data_account.fiscal_document_55').id,
@@ -275,32 +275,32 @@ class TestNFeBrasil(TransactionCase):
             fiscal_position_id=self.fpos.id,
         ))
 
-        self.invoices = self.env['account.invoice'].create(dict(
+        self.invoices = self.env['account.move'].create(dict(
             default_invoice.items(),
             partner_id=self.partner_fisica.id
         ))
-        self.invoices |= self.env['account.invoice'].create(dict(
+        self.invoices |= self.env['account.move'].create(dict(
             default_invoice.items(),
             partner_id=self.partner_juridica.id
         ))
-        self.invoices |= self.env['account.invoice'].create(dict(
+        self.invoices |= self.env['account.move'].create(dict(
             default_invoice.items(),
             partner_id=self.partner_juridica.id,
             fiscal_position_id=self.fpos_consumo.id
         ))
-        self.invoices |= self.env['account.invoice'].create(dict(
+        self.invoices |= self.env['account.move'].create(dict(
             default_invoice.items(),
             partner_id=self.partner_fisica_inter.id
         ))
-        self.invoices |= self.env['account.invoice'].create(dict(
+        self.invoices |= self.env['account.move'].create(dict(
             default_invoice.items(),
             partner_id=self.partner_juridica_inter.id
         ))
-        self.invoices |= self.env['account.invoice'].create(dict(
+        self.invoices |= self.env['account.move'].create(dict(
             default_invoice.items(),
             partner_id=self.partner_juridica_sp.id
         ))
-        self.invoices |= self.env['account.invoice'].create(dict(
+        self.invoices |= self.env['account.move'].create(dict(
             default_invoice.items(),
             partner_id=self.partner_exterior.id
         ))

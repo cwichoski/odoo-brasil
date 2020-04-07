@@ -23,7 +23,7 @@ class InvoiceEletronic(models.Model):
                 datas_fname="boleto-%s.pdf" % self.invoice_id.number,
                 datas=base64.b64encode(boleto),
                 mimetype='application/pdf',
-                res_model='account.invoice',
+                res_model='account.move',
                 res_id=self.invoice_id.id,
             ))
             atts.append(boleto_id.id)

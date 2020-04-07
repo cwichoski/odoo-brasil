@@ -23,7 +23,7 @@ class SaleOrder(models.Model):
                 order.total_despesas,
             })
 
-    @api.multi
+    
     def _prepare_invoice(self):
         res = super(SaleOrder, self)._prepare_invoice()
         res['weight'] = sum(
@@ -89,7 +89,7 @@ class SaleOrder(models.Model):
         readonly=True, states={'draft': [('readonly', False)],
                                'sent': [('readonly', False)]})
 
-    @api.multi
+    
     def action_confirm(self):
         for order in self:
             prec = order.currency_id.decimal_places
@@ -134,7 +134,7 @@ class SaleOrderLine(models.Model):
         })
         return res
 
-    @api.multi
+    
     def _prepare_order_line_procurement(self, group_id=False):
         vals = super(SaleOrderLine, self)._prepare_order_line_procurement(
             group_id=group_id)
@@ -151,7 +151,7 @@ class SaleOrderLine(models.Model):
     valor_frete = fields.Float(
         'Frete', default=0.0, digits=dp.get_precision('Account'))
 
-    @api.multi
+    
     def _prepare_invoice_line(self, qty):
         res = super(SaleOrderLine, self)._prepare_invoice_line(qty)
 

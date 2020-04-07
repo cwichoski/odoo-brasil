@@ -11,7 +11,7 @@ class StockPicking(models.Model):
 
     def _compute_invoices(self):
         for picking in self:
-            total = self.env['account.invoice'].search_count(
+            total = self.env['account.move'].search_count(
                 [('picking_origin_id', '=', picking.id)])
             picking.invoice_count = total
 
@@ -23,7 +23,7 @@ class StockPicking(models.Model):
         'account.fiscal.position', string="Posição Fiscal")
 
     def action_preview_danfe(self):
-        invoices = self.env['account.invoice'].search(
+        invoices = self.env['account.move'].search(
             [('picking_origin_id', '=', self.id)])
         return invoices.action_preview_danfe()
 
@@ -32,13 +32,13 @@ class StockPicking(models.Model):
             'product_id': move_line_id.product_id.id,
             'quantity': move_line_id.qty_done,
             'price_unit': move_line_id.product_id.lst_price,
-            'invoice_id': self.env['account.invoice'].new({
+            'invoice_id': self.env['account.move'].new({
                 'fiscal_position_id': self.fiscal_position_id.id,
                 'type': 'out_invoice',
                 'partner_id': self.partner_id.id,
             })
         }
-        line = self.env['account.invoice.line'].new(linevals)
+        line = self.env['account.move.line'].new(linevals)
         line._br_account_onchange_product_id()
         line._onchange_product_id()
         linevals = line._convert_to_write(
@@ -80,7 +80,7 @@ class StockPicking(models.Model):
                 (6, None, self.fiscal_position_id.fiscal_observation_ids.ids)]
         return vals
 
-    @api.multi
+    
     def action_done(self):
         res = super(StockPicking, self).action_done()
         pickings_to_invoice = self.filtered(
@@ -89,17 +89,17 @@ class StockPicking(models.Model):
             pickings_to_invoice.action_invoice_picking()
         return res
 
-    @api.multi
+    
     def action_invoice_picking(self):
         partner_ids = self.mapped('partner_id')
         if not partner_ids:
             raise UserError(_('No partner to invoice, please choose one!'))
-        invoice_ids = self.env['account.invoice']
+        invoice_ids = self.env['account.move']
         for partner_id in partner_ids:
             picking_ids = self.filtered(lambda x: x.partner_id == partner_id)
 
             inv_vals = picking_ids._prepare_invoice_values()
-            invoice_ids |= self.env['account.invoice'].create(inv_vals)
+            invoice_ids |= self.env['account.move'].create(inv_vals)
         invoice_ids.action_invoice_open()
         return invoice_ids
 

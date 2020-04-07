@@ -15,7 +15,7 @@ except ImportError:
 
 
 class AccountInvoice(models.Model):
-    _inherit = 'account.invoice'
+    _inherit = 'account.move'
 
     l10n_br_linha_digitavel = fields.Char(
         string="Linha Digitável", readonly=True,
@@ -109,7 +109,7 @@ class AccountInvoice(models.Model):
             line_obj.action_generate_payment_order_line(
                 item.payment_mode_id, vals)
 
-    @api.multi
+    
     def action_move_create(self):
         super(AccountInvoice, self).action_move_create()
         for item in self:

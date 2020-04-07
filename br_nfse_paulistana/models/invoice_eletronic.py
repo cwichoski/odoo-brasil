@@ -39,7 +39,7 @@ class InvoiceEletronicItem(models.Model):
 class InvoiceEletronic(models.Model):
     _inherit = 'invoice.eletronic'
 
-    @api.multi
+    
     def _compute_discriminacao(self):
         for item in self:
             descricao = ''
@@ -78,7 +78,7 @@ class InvoiceEletronic(models.Model):
         due_date = datetime.strftime(due_date, format)
         return due_date
 
-    @api.multi
+    
     def _hook_validation(self):
         errors = super(InvoiceEletronic, self)._hook_validation()
         if self.model == '001':
@@ -109,7 +109,7 @@ class InvoiceEletronic(models.Model):
 
         return errors
 
-    @api.multi
+    
     def _prepare_eletronic_invoice_values(self):
         res = super(InvoiceEletronic, self)._prepare_eletronic_invoice_values()
         if self.model == '001':
@@ -248,13 +248,13 @@ class InvoiceEletronic(models.Model):
                 datas_fname=report_name,
                 datas=base64.b64encode(danfse),
                 mimetype='application/pdf',
-                res_model='account.invoice',
+                res_model='account.move',
                 res_id=self.invoice_id.id,
             ))
             atts.append(danfe_id.id)
         return atts
 
-    @api.multi
+    
     def action_send_eletronic_invoice(self):
         super(InvoiceEletronic, self).action_send_eletronic_invoice()
         if self.model == '001' and self.state not in ('done', 'cancel'):
@@ -315,7 +315,7 @@ class InvoiceEletronic(models.Model):
             _logger.info('NFS-e Paulistana (%s) finished with status %s' % (
                 self.numero, self.codigo_retorno))
 
-    @api.multi
+    
     def action_cancel_document(self, context=None, justificativa=None):
         if self.model not in ('001'):
             return super(InvoiceEletronic, self).action_cancel_document(

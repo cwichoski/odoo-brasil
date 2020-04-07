@@ -12,7 +12,7 @@ from odoo.exceptions import UserError
 class PosOrder(models.Model):
     _inherit = 'pos.order'
 
-    @api.multi
+    
     def _compute_nfe_number(self):
         for item in self:
             docs = self.env['invoice.eletronic'].search(
@@ -250,7 +250,7 @@ class PosOrder(models.Model):
                 trib.append(float(val))
         return sum(trib)
 
-    @api.multi
+    
     def _compute_total_edocs(self):
         for item in self:
             item.total_edocs = self.env['invoice.eletronic'].search_count(
@@ -259,7 +259,7 @@ class PosOrder(models.Model):
     total_edocs = fields.Integer(string="Total NFe",
                                  compute=_compute_total_edocs)
 
-    @api.multi
+    
     def action_view_edocs(self):
         if self.total_edocs == 1:
             edoc = self.env['invoice.eletronic'].search(

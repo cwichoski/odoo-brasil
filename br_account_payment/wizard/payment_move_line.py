@@ -16,7 +16,7 @@ class PaymentAccountMoveLine(models.TransientModel):
     move_line_id = fields.Many2one(
         'account.move.line', readonly=True, string='Conta à Pagar/Receber')
     invoice_id = fields.Many2one(
-        'account.invoice', readonly=True, string='Fatura')
+        'account.move', readonly=True, string='Fatura')
     partner_type = fields.Selection(
         [('customer', 'Cliente'), ('supplier', 'Fornecedor')], readonly=True)
     partner_id = fields.Many2one(

@@ -3,7 +3,7 @@
 
      <record id="view_br_account_einvoice_invoice_form" model="ir.ui.view">
         <field name="name">br_account_einvoice_invoice_form</field>
-        <field name="model">account.invoice</field>
+        <field name="model">account.move</field>
         <field name="inherit_id" ref="br_account.view_br_account_invoice_form"/>
         <field name="arch" type="xml">
             <div class="alert alert-info" position="after">
@@ -39,7 +39,7 @@
 
     <record id="view_br_nfe_supplier_invoice_form" model="ir.ui.view">
         <field name="name">br_nfe_supplier_invoice_form</field>
-        <field name="model">account.invoice</field>
+        <field name="model">account.move</field>
         <field name="inherit_id" ref="br_stock_account.br_account_product_invoice_supplier_form"/>
         <field name="arch" type="xml">
             <page name="other_info" position="after">

@@ -745,7 +745,7 @@ class InvoiceEletronic(models.Model):
                                       payment_term_id=False):
         operation = 'in_invoice' \
             if self.tipo_operacao == 'entrada' else 'out_invoice'
-        journal_id = self.env['account.invoice'].with_context(
+        journal_id = self.env['account.move'].with_context(
             type=operation, company_id=company_id.id
         ).default_get(['journal_id'])['journal_id']
         partner = self.partner_id.with_context(force_company=company_id.id)
@@ -839,7 +839,7 @@ class InvoiceEletronic(models.Model):
             messages_log.append(message_log)
 
         vals['invoice_line_ids'] = items
-        account_invoice = self.env['account.invoice'].create(vals)
+        account_invoice = self.env['account.move'].create(vals)
         account_invoice.message_post(body=u"<ul><li>Fatura criada através da do xml\
                                      da NF-e %s</li></ul>" % self.numero)
 

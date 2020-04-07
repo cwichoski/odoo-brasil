@@ -88,7 +88,7 @@ class TestEletronicInvoice(TransactionCase):
                 }
              )
         ]
-        self.inv_incomplete = self.env['account.invoice'].create(dict(
+        self.inv_incomplete = self.env['account.move'].create(dict(
             name="Teste Validação",
             product_document_id=self.env.ref(
                 'br_data_account.fiscal_document_55').id,

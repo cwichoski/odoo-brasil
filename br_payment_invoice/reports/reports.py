@@ -12,7 +12,7 @@ class PaymentCnabReport(models.AbstractModel):
         lines = []
         docs = []
         for docid in docids:
-            doc = self.env['account.invoice'].browse(docid)
+            doc = self.env['account.move'].browse(docid)
             docs.append(doc)
             lines.append(doc.get_order_line())
         docargs = {

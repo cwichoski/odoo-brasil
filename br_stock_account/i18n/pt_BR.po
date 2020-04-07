@@ -31,32 +31,32 @@ msgid "(+) Seguro"
 msgstr "(+) Seguro"
 
 #. module: br_stock_account
-#: selection:account.invoice,freight_responsibility:0
+#: selection:account.move,freight_responsibility:0
 msgid "0 - Contratação do Frete por conta do Remetente (CIF)"
 msgstr "0 - Contratação do Frete por conta do Remetente (CIF)"
 
 #. module: br_stock_account
-#: selection:account.invoice,freight_responsibility:0
+#: selection:account.move,freight_responsibility:0
 msgid "1 - Contratação do Frete por conta do Destinatário (FOB)"
 msgstr "1 - Contratação do Frete por conta do Destinatário (FOB)"
 
 #. module: br_stock_account
-#: selection:account.invoice,freight_responsibility:0
+#: selection:account.move,freight_responsibility:0
 msgid "2 - Contratação do Frete por conta de Terceiros"
 msgstr "2 - Contratação do Frete por conta de Terceiros"
 
 #. module: br_stock_account
-#: selection:account.invoice,freight_responsibility:0
+#: selection:account.move,freight_responsibility:0
 msgid "3 - Transporte Próprio por conta do Remetente"
 msgstr "3 - Transporte Próprio por conta do Remetente"
 
 #. module: br_stock_account
-#: selection:account.invoice,freight_responsibility:0
+#: selection:account.move,freight_responsibility:0
 msgid "4 - Transporte Próprio por conta do Destinatário"
 msgstr "4 - Transporte Próprio por conta do Destinatário"
 
 #. module: br_stock_account
-#: selection:account.invoice,freight_responsibility:0
+#: selection:account.move,freight_responsibility:0
 msgid "9 - Sem Ocorrência de Transporte"
 msgstr "9 - Sem Ocorrência de Transporte"
 

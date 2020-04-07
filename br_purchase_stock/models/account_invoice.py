@@ -6,7 +6,7 @@ from odoo.addons import decimal_precision as dp
 
 
 class AccountInvoice(models.Model):
-    _inherit = 'account.invoice'
+    _inherit = 'account.move'
 
     def _prepare_invoice_line_from_po_line(self, line):
         res = super(AccountInvoice, self)._prepare_invoice_line_from_po_line(
@@ -21,7 +21,7 @@ class AccountInvoice(models.Model):
         string='Despesas Aduaneiras', digits=dp.get_precision('Account'),
         compute="_compute_amount")
 
-    @api.one
+    
     @api.depends('invoice_line_ids.price_subtotal',
                  'tax_line_ids.amount',
                  'currency_id', 'company_id')

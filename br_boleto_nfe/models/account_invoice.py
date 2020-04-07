@@ -5,7 +5,7 @@ from odoo import models
 
 
 class AccountInvoice(models.Model):
-    _inherit = 'account.invoice'
+    _inherit = 'account.move'
 
     def _get_email_template_invoice(self):
         return self.env.user.company_id.nfe_email_template

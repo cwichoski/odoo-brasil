@@ -7,14 +7,14 @@ from odoo.exceptions import UserError
 
 
 class AccountInvoice(models.Model):
-    _inherit = 'account.invoice'
+    _inherit = 'account.move'
 
     boleto = fields.Boolean(related="payment_mode_id.boleto")
 
     def _get_email_template_invoice(self):
         return self.env.user.company_id.boleto_email_tmpl
 
-    @api.multi
+    
     def send_email_boleto_queue(self):
         mail = self._get_email_template_invoice()
         if not mail:
@@ -25,7 +25,7 @@ class AccountInvoice(models.Model):
 
             atts = []
             self = self.with_context({
-                'origin_model': 'account.invoice',
+                'origin_model': 'account.move',
                 'active_ids': [item.id],
             })
 
@@ -45,7 +45,7 @@ class AccountInvoice(models.Model):
                     datas_fname=name,
                     datas=base64.b64encode(boleto),
                     mimetype='application/pdf',
-                    res_model='account.invoice',
+                    res_model='account.move',
                     res_id=item.id,
                 ))
                 atts.append(boleto_id.id)
@@ -55,7 +55,7 @@ class AccountInvoice(models.Model):
             }
             mail.send_mail(item.id, email_values=values)
 
-    @api.multi
+    
     def invoice_validate(self):
         res = super(AccountInvoice, self).invoice_validate()
         error = ''
@@ -112,11 +112,11 @@ class AccountInvoice(models.Model):
 Para prosseguir é necessário preencher os seguintes campos:\n""") + error)
         return res
 
-    @api.multi
+    
     def action_print_boleto(self):
         if self.state in ('draft', 'cancel'):
             raise UserError(
                 _('Fatura provisória ou cancelada não permite emitir boleto'))
-        self = self.with_context({'origin_model': 'account.invoice'})
+        self = self.with_context({'origin_model': 'account.move'})
         return self.env.ref(
             'br_boleto.action_boleto_account_invoice').report_action(self)

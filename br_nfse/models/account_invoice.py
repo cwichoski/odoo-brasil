@@ -5,7 +5,7 @@ from odoo import api, fields, models
 
 
 class AccountInvoice(models.Model):
-    _inherit = 'account.invoice'
+    _inherit = 'account.move'
 
     @api.depends('invoice_eletronic_ids.numero_nfse')
     def _compute_nfse_number(self):
@@ -38,7 +38,7 @@ class AccountInvoice(models.Model):
 
 
 class AccountInvoiceLine(models.Model):
-    _inherit = 'account.invoice.line'
+    _inherit = 'account.move.line'
 
     state = fields.Selection(
         string="Status",

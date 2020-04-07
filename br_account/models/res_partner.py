@@ -10,9 +10,9 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
     _description = 'Partner'
 
-    @api.multi
+    
     def _invoice_total(self):
-        account_invoice_report = self.env['account.invoice.report']
+        account_invoice_report = self.env['account.move.report']
         if not self.ids:
             self.total_invoiced = 0.0
             return True
@@ -31,7 +31,7 @@ class ResPartner(models.Model):
                 ('id', 'child_of', partner.id)]).ids
             all_partner_ids += all_partners_and_children[partner]
 
-        # searching account.invoice.report via the orm is comparatively
+        # searching account.move.report via the orm is comparatively
         # expensive (generates queries "id in []" forcing
         # to build the full table).
         # In simple cases where all invoices are in the same currency

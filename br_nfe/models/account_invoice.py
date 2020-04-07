@@ -6,9 +6,9 @@ from odoo.exceptions import UserError
 
 
 class AccountInvoice(models.Model):
-    _inherit = 'account.invoice'
+    _inherit = 'account.move'
 
-    @api.multi
+    
     def _compute_nfe_number(self):
         for item in self:
             docs = self.env['invoice.eletronic'].search(
@@ -37,7 +37,7 @@ class AccountInvoice(models.Model):
     import_declaration_ids = fields.One2many(
         'br_account.import.declaration', 'invoice_id')
 
-    @api.multi
+    
     def action_invoice_draft(self):
         for item in self:
             docs = self.env['invoice.eletronic'].search(
@@ -253,7 +253,7 @@ class AccountInvoice(models.Model):
         vals['informacao_adicional'] = invoice_line.informacao_adicional
         return vals
 
-    @api.multi
+    
     def copy(self, default=None):
         self.ensure_one()
         new_acc_inv = super(AccountInvoice, self).copy(default)
@@ -266,7 +266,7 @@ class AccountInvoice(models.Model):
 
 
 class AccountInvoiceLine(models.Model):
-    _inherit = 'account.invoice.line'
+    _inherit = 'account.move.line'
 
     declaration_line_ids = fields.One2many(
         'br_account.import.declaration.line',

@@ -9,15 +9,15 @@
         <field name="target">new</field>
     </record>
     <record id="view_br_account_invoice_form" model="ir.ui.view">
-        <field name="name">br_account.invoice.form</field>
-        <field name="model">account.invoice</field>
-        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="name">br_account.move.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.move_form"/>
         <field name="arch" type="xml">
             <field name="fiscal_position_id" position="replace"></field>
             <field name="payment_term_id" position="after">
                 <field name="fiscal_position_id" domain="['|', ('fiscal_type', '=', None), ('fiscal_type', '=', 'saida')]" />
             </field>
-            <field name="partner_bank_id" position="after">
+            <field name="invoice_partner_bank_id" position="after">
                 <field name="product_document_id" />
                 <field name="product_serie_id" />
             </field>
@@ -104,8 +104,8 @@
         </field>
     </record>
     <record id="view_br_account_invoice_cancel_form" model="ir.ui.view">
-        <field name="name">br_account.invoice.cancel.form</field>
-        <field name="model">account.invoice</field>
+        <field name="name">br_account.move.cancel.form</field>
+        <field name="model">account.move</field>
         <field name="inherit_id" ref="account_cancel.invoice_form_cancel_inherit"/>
         <field name="arch" type="xml">
             <button name="action_invoice_cancel" position="replace">
@@ -113,9 +113,9 @@
         </field>
     </record>
     <record id="view_br_account_invoice_supplier_form" model="ir.ui.view">
-        <field name="name">br_account.invoice.supplier.form</field>
-        <field name="model">account.invoice</field>
-        <field name="inherit_id" ref="account.invoice_supplier_form" />
+        <field name="name">br_account.move.supplier.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.move_supplier_form" />
         <field name="arch" type="xml">
             <xpath expr="//sheet/div" position="before">
                 <div class="oe_button_box" name="button_box"></div>
@@ -123,7 +123,7 @@
             <field name="fiscal_position_id" position="replace"></field>
             <field name="reference" position="after">
                 <field name="fiscal_position_id" domain="['|', ('fiscal_type', '=', 'import'), '|', ('fiscal_type', '=', 'entrada'), ('fiscal_type', '=', None)]"/></field>
-            <field name="partner_bank_id" position="after">
+            <field name="invoice_partner_bank_id" position="after">
                 <field name="product_document_id" />
                 <field name="product_serie_id" />
             </field>
@@ -213,8 +213,8 @@
         </field>
     </record>
     <record id="view_br_account_invoice_supplier_cancel_form" model="ir.ui.view">
-        <field name="name">br_account.invoice.supplier.cancel.form</field>
-        <field name="model">account.invoice</field>
+        <field name="name">br_account.move.supplier.cancel.form</field>
+        <field name="model">account.move</field>
         <field name="inherit_id" ref="account_cancel.invoice_supplier_cancel_form_inherit"/>
         <field name="arch" type="xml">
             <button name="action_invoice_cancel" position="replace">
@@ -224,7 +224,7 @@
     <!-- Invoice Line views -->
     <record model="ir.ui.view" id="br_account_product_invoice_line_tree">
         <field name="name">br_account_product.invoice.line.tree</field>
-        <field name="model">account.invoice.line</field>
+        <field name="model">account.move.line</field>
         <field name="inherit_id" ref="account.view_invoice_line_tree" />
         <field name="priority">26</field>
         <field name="arch" type="xml">
@@ -233,8 +233,8 @@
         </field>
     </record>
     <record model="ir.ui.view" id="view_br_account_invoice_line_form">
-        <field name="name">br_account.invoice.line.form</field>
-        <field name="model">account.invoice.line</field>
+        <field name="name">br_account.move.line.form</field>
+        <field name="model">account.move.line</field>
         <field name="inherit_id" ref="account.view_invoice_line_form" />
         <field name="priority">36</field>
         <field name="arch" type="xml">

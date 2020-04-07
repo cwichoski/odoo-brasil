@@ -5,7 +5,7 @@ from odoo import api, fields, models
 
 
 class AccountInvoice(models.Model):
-    _inherit = 'account.invoice'
+    _inherit = 'account.move'
 
     incoterm_id = fields.Many2one(
         'account.incoterms', 'Tipo do Frete',

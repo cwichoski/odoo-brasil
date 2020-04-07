@@ -18,7 +18,7 @@
 
     <act_window id="br_boleto_action"
         name="Enviar boletos via e-mail"
-        src_model="account.invoice"
+        src_model="account.move"
         res_model="boleto.send.email"
         view_mode="form"
         target="new"

@@ -9,7 +9,7 @@ class InvoiceEletronicSelectionWizard(models.TransientModel):
         return self.env.context.get('active_id')
 
     invoice_id = fields.Many2one(
-        'account.invoice', default=_default_invoice_id)
+        'account.move', default=_default_invoice_id)
 
     einvoice_id = fields.Many2one(
         'invoice.eletronic', string="E-Invoice",

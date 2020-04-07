@@ -16,7 +16,7 @@ class ImportDeclarationLine(models.Model):
     _inherit = 'br_account.import.declaration.line'
 
     invoice_line_id = fields.Many2one(
-        'account.invoice.line',
+        'account.move.line',
         string="Linhas da fatura")
 
 

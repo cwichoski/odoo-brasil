@@ -48,7 +48,7 @@ class TestAccountInvoice(TestBaseBr):
             'account_id': self.receivable_account.id,
             'invoice_line_ids': invoice_line_data
         }
-        self.invoices = self.env['account.invoice'].create(dict(
+        self.invoices = self.env['account.move'].create(dict(
             default_invoice.items(),
             partner_id=self.partner.id
         ))

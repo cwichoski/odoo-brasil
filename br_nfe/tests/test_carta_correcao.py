@@ -156,7 +156,7 @@ class TestCartaCorrecao(TransactionCase):
             'invoice_line_ids': invoice_line_data,
             'partner_id': self.partner_fisica.id,
         }
-        self.account_invoice = self.env['account.invoice'].create(
+        self.account_invoice = self.env['account.move'].create(
             default_invoice)
         invoice_eletronic = {
             'model': '55',
