@@ -44,7 +44,6 @@ class ResPartner(models.Model):
          _(u'This CPF/CNPJ number is already being used by another partner!'))
     ]
 
-    @api.v8
     def _display_address(self, without_company=False):
         address = self
 
