@@ -411,7 +411,11 @@ class InvoiceEletronic(models.Model):
                     'pICMSST': "%.02f" % item.icms_st_aliquota,
                     'vICMSST': "%.02f" % item.icms_st_valor,
                     'pCredSN': "%.02f" % item.icms_aliquota_credito,
-                    'vCredICMSSN': "%.02f" % item.icms_valor_credito
+                    'vCredICMSSN': "%.02f" % item.icms_valor_credito,
+                    'vICMSSubstituto': "%.02f" % item.icms_substituto,
+                    'vBCSTRet': "%.02f" % item.icms_bc_st_retido,
+                    'pST': "%.02f" % item.icms_aliquota_st_retido,
+                    'vICMSSTRet': "%.02f" % item.icms_st_retido,
                 },
                 'IPI': {
                     'clEnq': item.classe_enquadramento_ipi or '',
@@ -425,6 +429,7 @@ class InvoiceEletronic(models.Model):
         if item.tem_difal:
             imposto['ICMSUFDest'] = {
                 'vBCUFDest': "%.02f" % item.icms_bc_uf_dest,
+                'vBCFCPUFDest': "%.02f" % item.icms_bc_uf_dest,
                 'pFCPUFDest': "%.02f" % item.icms_aliquota_fcp_uf_dest,
                 'pICMSUFDest': "%.02f" % item.icms_aliquota_uf_dest,
                 'pICMSInter': "%.02f" % item.icms_aliquota_interestadual,
@@ -572,6 +577,7 @@ class InvoiceEletronic(models.Model):
                 },
                 'indIEDest': self.ind_ie_dest,
                 'IE':  re.sub('[^0-9]', '', partner.inscr_est or ''),
+                'ISUF': partner.suframa or '',
             }
             if self.model == '65':
                 dest.update(
