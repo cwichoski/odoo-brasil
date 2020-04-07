@@ -83,7 +83,7 @@ class ResCompany(models.Model):
     def _compute_expiry_date(self):
         try:
             pfx = base64.decodestring(
-                self.with_context(bin_size=False).nfe_a1_file)
+                self.with_context({'bin_size': False}).nfe_a1_file)
             pfx = crypto.load_pkcs12(pfx, self.nfe_a1_password)
             cert = pfx.get_certificate()
             end = datetime.strptime(
