@@ -83,6 +83,7 @@ class ResCompany(models.Model):
     def _compute_expiry_date(self):
         try:
             if not self.nfe_a1_file:
+                self.cert_state = 'unset'
                 _logger.info(_(u'nfe_a1_file certificate not set'))
             else:
                 pfx = base64.decodestring(
