@@ -83,6 +83,8 @@ class ResCompany(models.Model):
     def _compute_expiry_date(self):
         try:
             if not self.nfe_a1_file:
+                _logger.info(_(u'nfe_a1_file certificate not set'))
+            else:
                 pfx = base64.decodestring(
                     self.with_context({'bin_size': False}).nfe_a1_file)
                 pfx = crypto.load_pkcs12(pfx, self.nfe_a1_password)
@@ -97,8 +99,6 @@ class ResCompany(models.Model):
                     self.cert_state = 'expired'
                 self.cert_information = "%s\n%s\n%s\n%s" % (
                     subj.CN, subj.L, subj.O, subj.OU)
-            else:
-                _logger.info(_(u'nfe_a1_file certificate not set'))
         except crypto.Error:
             self.cert_state = 'invalid_password'
         except:
