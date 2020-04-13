@@ -84,6 +84,7 @@ class ResCompany(models.Model):
         try:
             if not self.nfe_a1_file:
                 self.cert_state = 'not_loaded'
+                self.cert_information = 'Not Loaded'
                 _logger.info(_(u'nfe_a1_file certificate not set'))
             else:
                 pfx = base64.decodestring(
